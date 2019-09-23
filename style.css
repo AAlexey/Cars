@@ -1,7 +1,7 @@
 html{
     height: 100%;
     background: url('./image/gif_art.gif') center/cover no-repeat;
-    font-family: "Pixel Cyr Normal", serif;
+    
 }
 
 .hide{
@@ -20,6 +20,7 @@ html{
     border: 5px dashed rgb(100, 99, 99);
     font-size: 20px;
     font-weight: 800;
+    
 }
 
 .menu{
@@ -30,6 +31,7 @@ html{
     justify-content: center;
     align-items: center;
     font-weight: 800;
+    
 }
 
 .bt{
@@ -40,6 +42,7 @@ html{
    font-weight: 800;
    background: rgba(138, 136, 136, 0.452);
    border: 2px solid black;
+   
 }
 
 .bt:hover{
