@@ -1,37 +1,114 @@
+/*  RESET CSS   */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*END RESET CSS*/
+
+
 html{
     height: 100%;
     background: url('./image/gif_art.gif') center/cover no-repeat;
-    
+}
+
+body{
+    height: 100%;
+    margin: 0;
 }
 
 .hide{
     visibility: hidden;
 }
 
-.car{
+.car, .enemy{
+    position: absolute;
     width: 50px;
     height: 100px;
     background: transparent url('./image/audi.png') center/cover no-repeat;
-    margin: auto;
+    left: 125px;
+    bottom:10px;
+}
+
+.enemy{
+    background: transparent url('./image/white.png') center/cover no-repeat;
 }
 
 .score{
+    position: absolute;
     width: 100px;
     border: 5px dashed rgb(100, 99, 99);
     font-size: 20px;
     font-weight: 800;
-    
+    margin: 8px;
 }
 
+.gameArea{
+    position: relative;
+    margin: auto;
+    width: 300px;
+    height: 100%;
+    background-color: #222222;
+    overflow: hidden;
+}
+
+.line{
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: #fff;
+    left: 145px;
+}
+
+
+
+
+
+                        /* ОФОРМЛЕНИЕ */
 .menu{
-    /* height: 250px;*/
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: 800;
-    
 }
 
 .bt{
@@ -60,21 +137,23 @@ html{
 .slider {
     -webkit-appearance: none;
     width: 30%;
-    height: 25px;
+    height: 15px;
+    border-radius: 5px;   
     background: #d3d3d3;
     outline: none;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     -webkit-transition: .2s;
-    transition: .2s;
+    transition: opacity .2s;
 }
-.slider:hover {
+/* .slider:hover {
     opacity: 1;
-}
+} */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
     height: 25px;
+    border-radius: 50%; 
     background: #4CAF50;
     cursor: pointer;
 }
@@ -82,6 +161,7 @@ html{
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
+    border-radius: 50%;
     background: #4CAF50;
     cursor: pointer;
 }
