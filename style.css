@@ -47,6 +47,7 @@ table {
 html{
     height: 100%;
     background: url('./image/gif_art.gif') center/cover no-repeat;
+    overflow: hidden;
 }
 
 body{
@@ -63,21 +64,25 @@ body{
     width: 50px;
     height: 100px;
     background: transparent url('./image/audi.png') center/cover no-repeat;
-    left: 125px;
-    bottom:10px;
 }
 
 .enemy{
     background: transparent url('./image/white.png') center/cover no-repeat;
 }
 
-.score{
+.score, .LocalStorage{
     position: absolute;
-    width: 100px;
-    border: 5px dashed rgb(100, 99, 99);
+    background: black;
+    color: white;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
     margin: 8px;
+    font-family: sans-serif;
+    z-index: 100;
+}
+
+.game{
+    height: 100%;
 }
 
 .gameArea{
@@ -101,6 +106,7 @@ body{
 
 
 
+
                         /* ОФОРМЛЕНИЕ */
 .menu{
     position: relative;
@@ -109,10 +115,10 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: 800;
+    top:100px;
 }
 
 .bt{
-   opacity: none;
    padding: 10px .5em;
    margin: 7px; 
    font-size: 30px;
@@ -134,23 +140,42 @@ body{
         0 1px 1px rgba(255,255,255,.1);
 }
 
+
+
+.level{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 20px;
+    top: 90px;
+}
+.level>button{
+    outline: none;
+    color: black;
+    padding: 3px;
+    margin:5px;
+    border-bottom: 2px double black;
+}
+
+
+
+
+
+
+
 .slider {
-    -webkit-appearance: none;
     width: 30%;
     height: 15px;
     border-radius: 5px;   
     background: #d3d3d3;
     outline: none;
-    /* opacity: 0.7; */
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
-/* .slider:hover {
-    opacity: 1;
-} */
+
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
     width: 25px;
     height: 25px;
     border-radius: 50%; 
